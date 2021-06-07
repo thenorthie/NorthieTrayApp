@@ -9,7 +9,7 @@ Add-Type -AssemblyName System.Windows.Forms,PresentationFramework
 $appContext = New-Object System.Windows.Forms.ApplicationContext
 
 # Create an icon from base64
-$Base64 = "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"
+$Base64 = "Qk2KEAAAAAAAAIoAAAB8AAAAIAAAACAAAAABACAAAwAAAAAQAADDDgAAww4AAAAAAAAAAAAAAAD/AAD/AAD/AAAAAAAA/0JHUnOPwvUoUbgeFR6F6wEzMzMTZmZmJmZmZgaZmZkJPQrXAyhcjzIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA9wAAAOEAAACxAAAAbAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFkAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAB/wADCP8AAgb/AAEC/wAAAP8AAAD/AAAA8wAAAI4AAAALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZAAAA+QAAAPcAAABVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8BBg//C1rh/wta4f8KUs3/CECf/wQeTP8AAQP/AAAA/wAAANAAAABEAAAABgAAAAAAAAAAAAAAWwAAAPgAAAD/AAAA/wAAAPcAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+AEFDP8LXuz/DGP3/w1k9/8MY/f/DGP3/wpQx/8CEi3/AAAA/wAAAP8AAADmAAAAnAAAAHsAAAD6AQAA/3pfAP94XQD/AQEA/wAAAPkAAABaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhAAED/wpX2v8NZPf/N7z+/zOy/f8ikfv/Dmf3/wxd5v8eJTH/Dg0M/wEBAf8AAAD/AAAA/wIBAP97YAD/8rwA//G7AP93XAD/AQEA/wAAAPkAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALMAAAD/CEKl/wxj9/8zs/3/Pcj//z3I//81uP3/NmKh/1lUS/9YU0n/SkY9/y0qJf8ODQv/e2AB//G7AP/yvAD/8rwA//C6AP92XAD/AAAA/wAAAOoAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcQAAAP8EIVL/DGP3/yOT+/89yP//Pcf+/0uOo/9ZVUv/WVRK/1lUSv9ZVEr/WVRK/6mnof/32nj/8rwB//K8AP/yvAD/8rwA/+q2AP8HBgD/AAAA7gAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfAAAA+AADCP8KUs3/D2n3/za5/f9LjKH/WVVL/1lUSv9ZVEr/WVRK/1lUSv+rqKP//v7+///+/f/43Hv/8rwA//K8AP/yvAD/67YA/wgGAP8AAADuAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTAAAA/wISLv8MXun/NmGf/1lUSv9ZVEr/WVRK/1lUSv9aVUv/qqij/////////////////////v/43Hv/8rwB//K8AP/rtgD/CAYA/wAAAO4AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAADaAAAA/yAoNv9ZVEv/WVRK/1lUSv9ZVEr/WlVL/6qnnv/+/v7////////////////////////+/f/423j/8rwB/+u2AP8IBgD/AAAA7gAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEsAAAD/ERAO/1lUSv9ZVEr/WVRK/1lUSv+qpZr/88Yr//zuvv/////////////////////////////+/P/423j/67cB/wgGAP8AAADuAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQAAAOwBAQH/TUhA/1lUSv9ZVEr/q6ij//7+/v/77Lb/88EX//ztu//////////////////////////////+/f/x13v/CAYB/wAAAPsAAABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAogAAAP8uKyb/WlVL/6qoo//////////////////77Ln/88EX//zuvv////////////////////////////////+CgoL/AQEB/wAAAPkAAABaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6AAAA/xIRD/+qp6L//v7+///////////////////////77Lb/88EX//zuv/////////////////////////////39/f9/f3//AQEB/wAAAPkAAABbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWwAAAPgBAQD/fGAC//fdgv////7////////////////////////////767X/88EX//zuvv////////////////////////////39/f9/f3//AQEB/wAAAPgAAABaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF0AAAD6AQAA/3tgAP/xvAD/8rwC//negf////7////////////////////////////77Lb/9Mcr///+/P////////////////////////////39/f+CgoL/AQEB/wAAAPcAAABTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZAAAA+wEBAP97XwD/8rwA//K8AP/yvAD/8rwA//negf////7//////////////////////////////vv//////////////////f39//39/f////////////////9/f3//AQEB/wAAAPQAAAA2AAAAAAAAAAAAAAAAAAAAAAAAAF0AAAD8AQEA/39jAP/yvAD/8rwA//K8AP/yvAD/8rwC//neg/////7//////////////////////////////////Pz8/8rKyv+urq7/rq6u/8zMzP/9/f3///////z8/P9nZ2f/AAAA/wAAAOAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAD8AgEA/39iAP/yvAD/8rwA//K8AP/yvAD/8r0D//neg/////7////////////////////////////Ly8v/s7Oz/8jIyP/IyMj/srKy/8zMzP////////////X19f83Nzf/AAAA/wAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8AAAD6AgIA/35iAP/rtgD/67YA/+u2AP/rtgD/67cC//HYgf////7//////////////////Pz8/6ysrP/Jycn/zMzM/8zMzP/IyMj/rq6u//39/f///////////9fX1/8LCwv/AAAA+wAAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAAD6AQEA/wgGAP8IBgD/CAYA/wgGAP8IBgD/CAYB/4SEhP/+/v7////////////8/Pz/q6ur/8nJyf/MzMz/zMzM/8jIyP+urq7//f39/////////////////39/f/8AAAD/AAAAwQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8AAAD1AAAA9gAAAPYAAAD2AAAA9gAAAPcAAAD9AgIC/4eHh//+/v7////////////Jycn/s7Oz/8nJyf/Jycn/s7Oz/8rKyv//////////////////////8PDx/xAPFf8AAAD8AAAANgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAARAAAAEQAAABEAAAARAAAAEQAAAGAAAAD7AwMD/4eHh//+/v7///////r6+v/Jycn/q6ur/6ysrP/Ly8v//Pz8//////////////////39//+Ng/P/Ewpx/wAAAP8AAACjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF0AAAD7AgIC/4SEhP/////////////////8/Pz//Pz8///////////////////////9/f//ioHz/yUT6P8fD8b/AAAC/wAAAOwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8AAAD7AQEB/4SEhP/+/v7//////////////////////////////////v7//46F8/8kEuj/JBLo/yQS5/8HAyv/AAAA/gAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAGAAAAD7AgIC/3Fxcf/6+vr///////////////////////7+//+RiPP/JRPo/yQS6P8kEuj/JBLo/xEIbv8AAAD/AAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAFkAAAD3AQEB/0FBQf/f39/////////////+/v//kIfz/yUT6P8kEuj/JBLo/yQS6P8kEuj/GQyg/wAAAP8AAAC2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0AAADjAAAA/w4ODv+Dg4P/8fHz/42E8/8lE+j/JBLo/yQS6P8kEuj/JBLo/yQS6P8eD8H/AAAB/wAAAN4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUAAACpAAAA/QAAAP8QDxf/Ewp2/yAQzf8kEuj/JBLo/yQS6P8kEuj/JBLo/yEQ0/8BAAX/AAAA9gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABCAAAAygAAAP4AAAD/AQEH/wgEMv8RCXD/Gg2n/yAQzf8iEd3/IRDT/wEBB/8AAAD+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQQAAAKgAAAD0AAAA/wAAAP8AAAD/AAAD/wIBCv8CAQ7/AAAB/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAABJAAAAhgAAALcAAADfAAAA9gAAAP8AAAD/AAAA/w=="
 $bitmap = New-Object System.Windows.Media.Imaging.BitmapImage
 $bitmap.BeginInit()
 $bitmap.StreamSource = [System.IO.MemoryStream][System.Convert]::FromBase64String($Base64)
@@ -21,7 +21,7 @@ $icon = [System.Drawing.Icon]::FromHandle($image.GetHicon())
 # Create a notify icon
 $script:TrayIcon = New-Object System.Windows.Forms.NotifyIcon
 $TrayIcon.Icon = $icon 
-$TrayIcon.Text = "My Cool App"
+$TrayIcon.Text = "Website Launcher"
 
 # Make PowerShell Disappear - Thanks Chrissy
 $windowcode = '[DllImport("user32.dll")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);'
@@ -118,10 +118,12 @@ Function Create-ContextMenu {
     
     <StackPanel Background="#333333" >
         <Line Margin="3"/>
-        <MenuItem Name="Open" Header="Open My Cool App" FontWeight="Bold" Style="{StaticResource MainMenuitem}"/>
+        <MenuItem Name="Open" Header="Website Launcher" FontWeight="Bold" Style="{StaticResource MainMenuitem}"/>
         <Separator Width="240" Height="0.5" />
 
-        <MenuItem Name="M365Portals" Header="M365 Portals" Style="{StaticResource SubMenuParentitem}"/>
+        <MenuItem Name="M365Portals" Header="M365 Portals" Style="{StaticResource SubMenuParentitem}"/> 
+        <MenuItem Name="BunningsApps" Header="Bunnings Apps" Style="{StaticResource SubMenuParentitem}"/>
+        <MenuItem Name="ITProTools" Header="IT Pro Tools" Style="{StaticResource SubMenuParentitem}"/>
         <MenuItem Name="Options" Header="Options" Style="{StaticResource SubMenuParentitem}"/>
         <MenuItem Name="Exit" Header="Exit" Style="{StaticResource MainMenuitem}"/>
         <Line Margin="3"/>
@@ -130,15 +132,45 @@ Function Create-ContextMenu {
             <StackPanel >
                 <Line Margin="3"/>
                 <MenuItem Name="AdminPortal" Header="Admin Portal" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="AzurePortal" Header="Azure Portal" Style="{StaticResource SubMenuitem}"/>
                 <MenuItem Name="TeamsPortal" Header="Teams Admin Portal" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="MTRMSPortal" Header="MTR MS Portal" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="MEMCMConsole" Header="MEMCM Console" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="AppsAdmConsole" Header="Apps ADM Console" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="MSStoreforBus" Header="MS Store 4 Business" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="VLSCPortal" Header="VLSC Portal" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="VSSubscrip" Header="VS Subscription" Style="{StaticResource SubMenuitem}"/>
                 <Line Margin="3"/>
             </StackPanel>
             </Border>
         </Popup>
-        <Popup Name="Popup" PopupAnimation="Fade" Focusable="True" Placement="Left" PlacementTarget="{Binding ElementName=Options}" Style="{StaticResource Popup}" HorizontalOffset="-5">
+        <Popup Name="BunPortalPopup" PopupAnimation="Fade" Focusable="True" Placement="Right" PlacementTarget="{Binding ElementName=BunningsApps}" Style="{StaticResource Popup}" HorizontalOffset="-5">
+            <Border Background="#333333" BorderBrush="White" BorderThickness="0.0">
+            <StackPanel >
+                <Line Margin="3"/>
+                <MenuItem Name="Intranet" Header="Intranet" Style="{StaticResource SubMenuitem}"/>
+                <Line Margin="3"/>
+            </StackPanel>
+            </Border>
+        </Popup>
+        <Popup Name="ITProToolsPopup" PopupAnimation="Fade" Focusable="True" Placement="Right" PlacementTarget="{Binding ElementName=ITProTools}" Style="{StaticResource Popup}" HorizontalOffset="-5">
+            <Border Background="#333333" BorderBrush="White" BorderThickness="0.0">
+            <StackPanel >
+                <Line Margin="3"/>
+                <MenuItem Name="AdaptCards" Header="Adaptive Cards" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="GPOSearch" Header="Group Policy Search" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="MSAdoption" Header="MS Adoption Portal" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="PBIPlaygnd" Header="PowerBi Playground" Style="{StaticResource SubMenuitem}"/>
+                <MenuItem Name="MSFasttrk" Header="MS FastTrack" Style="{StaticResource SubMenuitem}"/>
+                <Line Margin="3"/>
+            </StackPanel>
+            </Border>
+        </Popup>        
+        <Popup Name="Popup" PopupAnimation="Fade" Focusable="True" Placement="Right" PlacementTarget="{Binding ElementName=Options}" Style="{StaticResource Popup}" HorizontalOffset="-5">
             <Border Background="#333333" BorderBrush="White" BorderThickness="0.9">
             <StackPanel >
                 <Line Margin="3"/>
+                <MenuItem Name="msportals" Header="MSPortals.io" Style="{StaticResource SubMenuitem}"/>
                 <MenuItem Name="ChangeColour" Header="Change Colour" Style="{StaticResource SubMenuitem}"/>
                 <MenuItem Name="ChangeSize" Header="Change Size" Style="{StaticResource SubMenuitem}"/>
                 <Line Margin="3"/>
@@ -181,8 +213,79 @@ Function Create-ContextMenu {
     })
 
     # Open M365 Admin Portal
+    $CM.AdminPortal.Add_Click({
+        Start-Process MSEdge "https://admin.microsoft.com/"
+        $CM.ContextMenu.Close()
+    })
+    # Open Azure Portal
+    $CM.AzurePortal.Add_Click({
+        Start-Process MSEdge "https://portal.azure.com/"
+        $CM.ContextMenu.Close()
+    })
+    # Open M365 Teams Admin Portal
     $CM.TeamsPortal.Add_Click({
         Start-Process MSEdge "https://admin.teams.microsoft.com/dashboard"
+        $CM.ContextMenu.Close()
+    })
+    # Open MTR Managed Services Portal MEMCMConsole
+    $CM.MTRMSPortal.Add_Click({
+        Start-Process MSEdge "https://portal.rooms.microsoft.com/"
+        $CM.ContextMenu.Close()
+    })
+    # Open MEMCM Console
+    $CM.MEMCMConsole.Add_Click({
+        Start-Process MSEdge "https://endpoint.microsoft.com/"
+        $CM.ContextMenu.Close()
+    })
+    # Open Apps Admin Console
+    $CM.AppsAdmConsole.Add_Click({
+        Start-Process MSEdge "https://config.office.com/"
+        $CM.ContextMenu.Close()
+    })
+    # Open MS Store for Business Portal
+    $CM.MSStoreforBus.Add_Click({
+        Start-Process MSEdge "https://businessstore.microsoft.com/"
+        $CM.ContextMenu.Close()
+    })
+    # Open VLSC Portal 
+    $CM.VLSCPortal.Add_Click({
+        Start-Process MSEdge "https://www.microsoft.com/Licensing/servicecenter/"
+        $CM.ContextMenu.Close()
+    })
+    # Open Visual Studio Subscription
+    $CM.VSSubscrip.Add_Click({
+        Start-Process MSEdge "https://my.visualstudio.com/"
+        $CM.ContextMenu.Close()
+    })
+    # Open Adaptive Cards Portal
+    $CM.AdaptCards.Add_Click({
+        Start-Process MSEdge "https://amdesigner.azurewebsites.net/"
+        $CM.ContextMenu.Close()
+    })    
+    # Open Group Policy Search
+    $CM.GPOSearch.Add_Click({
+        Start-Process MSEdge "https://gpsearch.azurewebsites.net/"
+        $CM.ContextMenu.Close()
+    })    
+    # Open MS Adoption Portal
+    $CM.MSAdoption.Add_Click({
+        Start-Process MSEdge "https://adoption.microsoft.com/"
+        $CM.ContextMenu.Close()
+    })    
+    # Open Power BI Playground
+    $CM.PBIPlaygnd.Add_Click({
+        Start-Process MSEdge "https://microsoft.github.io/PowerBI-JavaScript/demo/v2-demo/index.html"
+        $CM.ContextMenu.Close()
+    })    
+    # Open Microsoft FastTrack Portal
+    $CM.MSFasttrk.Add_Click({
+        Start-Process MSEdge "https://fasttrack.microsoft.com/"
+        $CM.ContextMenu.Close()
+    })    
+    # Open MSPortals.io
+    $CM.msportals.Add_Click({
+        Start-Process MSEdge "https://msportals.io/"
+        $CM.ContextMenu.Close()
     })
     # Change colour option
     $CM.ChangeColour.Add_Click({
